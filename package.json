@@ -1,0 +1,30 @@
+{
+  "name": "testwork_sirius_future",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
+    "@svgr/webpack": "^5.4.0",
+    "moment": "^2.29.0",
+    "moment-locales-webpack-plugin": "^1.2.0",
+    "next": "9.5.3",
+    "prettier": "^2.1.2",
+    "react": "16.13.1",
+    "react-datetime": "^3.0.4",
+    "react-dom": "16.13.1",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8"
+  },
+  "devDependencies": {
+    "eslint-plugin-emotion": "^10.0.27",
+    "file-loader": "^6.1.0",
+    "url-loader": "^4.1.0"
+  }
+}
