@@ -34,16 +34,14 @@ const Line = styled.div`
 `;
 
 export default function Timeline() {
-  const [time, setTime] = useState(
-    () => moment().hours() * 60 + moment().minutes()
-  );
+  const [time, setTime] = useState();
   useEffect(() => {
-    const id = setInterval(() => {
-      setTime(moment().hours() * 60 + moment().minutes());
-    }, 60000);
+    const countTime = () => setTime(moment().hours() * 60 + moment().minutes());
+    countTime();
+    const id = setInterval(countTime, 60000);
     return () => clearInterval(id);
   }, []);
-  if (START > time || time > END) return null;
+  if (START > time || time > END || !time) return null;
   const top = (ROW_HEIGHT / ROWSTEP) * (time - START) + TABLE_HEADER_HEIGHT;
   return (
     <TimelineContainer top={top}>
